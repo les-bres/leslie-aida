@@ -19,7 +19,7 @@ def home():
          data = data.replace('^', '(')
          data = data[:126239]
          return data
-
+         comment = '''
     def findzipRange(lines, target, location):          # set up code to run through a column of our data for zip codes, then find the range
         rangelista = []
         for line in lines:                              # every line where the target is there, like range for small or commercial etc
@@ -96,7 +96,7 @@ def home():
         return lines
         
     # data crunching to be continued
-
+'''
     data = removeLineBr(data)
     lines = data.split("\n")
 

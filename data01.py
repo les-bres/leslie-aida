@@ -38,7 +38,8 @@ data = inStream.read()
 inStream.close()
 data = removeLineBr(data)
 lines = data.split("\n")                        # split data at line break to separate by row
-html = '''<html> \n <body bgcolor= "#ffe4c4"> <title> Hw25 data </title> <img src="http://classroomclipart.com/images/gallery/Animations/lightbulb.gif" alt="lightbulb" align="left" height="100" width="80">  </title> <img src="http://classroomclipart.com/images/gallery/Animations/lightbulb.gif" alt="lightbulb" align="right" height="100" width="80"> <br> <h1> <center> <font color ="#800000">  Electric Consumption by Zip Codes 2010 </font> </h1> <br> <center>''' + str(HEADING) + '<br> <br> <table align=""center"" border="1"> \n '      # sets up top of pg
+html = '''<html> \n <body bgcolor= "#ffe4c4"> <title> Hw25 data </title> <img src="http://classroomclipart.com/images/gallery/Animations/lightbulb.gif" alt="lightbulb" align="left" height="100" width="80">  </title> <img src="http://classroomclipart.com/images/gallery/Animations/lightbulb.gif" alt="lightbulb" align="right" height="100" width="80"> <br> <h1> <center> <font color ="#800000">  Electric Consumption by Zip Codes 2010 </font> </h1> <br> <center>''' + str(HEADING) + '<br> <br> <table align=""center"" border="1">
+ \n '      # sets up top of pg
 for line in lines:                              # for each line within the list of lines, you need to set up the rows
     if lines.index(line) == 0:
         lineList = line.split(',')
@@ -54,4 +55,3 @@ html += "<br> <br> <h2> Sources </h2>  All data from: <a href='https://nycopenda
 html += "<br><br><br> <br> For Further Analysis, click : <a href='http://lisa.stuy.edu/~leslie.bresnahan/analysis01.py'> HERE </a> "
 html += "</html> "
 print html
-
