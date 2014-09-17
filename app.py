@@ -21,8 +21,8 @@ def home():
          return data
     
     data = removeLineBr(data);
-    lines = data.split("\n")  
-    return render_template("home.html", data = lines);
+    #lines = data.split("\n")  
+    return render_template("home.html", data = data, lines= data.split("\n"));
 
 
 if __name__ == "__main__":
